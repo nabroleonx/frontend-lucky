@@ -42,7 +42,7 @@ export default function VisionBoard() {
 
   useEffect(() => {
     if (imagesURL.length === 3) {
-      axios.post("http://localhost:5000/api/goal", {
+      axios.post("https://backend-lucky-production.up.railway.app/api/goal", {
         img1: imagesURL[0],
         img2: imagesURL[1],
         img3: imagesURL[2],

@@ -41,9 +41,12 @@ export default function ReceiptUpload() {
   useEffect(() => {
     if (imagesURL.length === 1) {
       axios
-        .post("http://localhost:5000/api/transactions/receipt", {
-          imgUrl: imagesURL[0],
-        })
+        .post(
+          "https://backend-lucky-production.up.railway.app/api/transactions/receipt",
+          {
+            imgUrl: imagesURL[0],
+          }
+        )
         .then((res) => {
           console.log(res);
         });

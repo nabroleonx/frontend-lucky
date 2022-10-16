@@ -8,7 +8,7 @@ function PlaidLink() {
   useEffect(() => {
     const createLinkToken = async () => {
       const response = await fetch(
-        "http://localhost:5000/api/accounts/initial_token"
+        "https://backend-lucky-production.up.railway.app/api/accounts/initial_token"
       );
       const { link_token } = await response.json();
       setToken(link_token);
@@ -19,7 +19,7 @@ function PlaidLink() {
   const onSuccess = useCallback(async (publicToken, metadata) => {
     //TODO: Start showing loading screen
     const result = await fetch(
-      "http://localhost:5000/api/accounts/public_token",
+      "https://backend-lucky-production.up.railway.app/api/accounts/public_token",
       {
         method: "POST",
         body: JSON.stringify({
