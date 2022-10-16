@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Fragment } from "react";
 import {
   ChevronDownIcon,
@@ -279,6 +280,7 @@ export default function Calendar() {
                 <div className="py-1">
                   <Menu.Item>
                     {({ active }) => (
+                      // eslint-disable-next-line jsx-a11y/anchor-is-valid
                       <a
                         href="#"
                         className={classNames(
