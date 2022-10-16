@@ -1,6 +1,6 @@
 import { BanknotesIcon } from "@heroicons/react/24/outline";
 import React, { useCallback, useState, useEffect } from "react";
-import { usePlaidLink, PlaidLinkOnSuccess } from "react-plaid-link";
+import { usePlaidLink } from "react-plaid-link";
 
 function PlaidLink() {
   const [token, setToken] = useState(null);
