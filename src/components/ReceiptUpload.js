@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useDropzone } from "react-dropzone";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -6,7 +6,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 export default function ReceiptUpload() {
   const [files, setFiles] = useState([]);
   const [previews, setPreview] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [imagesURL, setImagesURL] = useState([]);
   useEffect(() => {
     setPreview(

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useDropzone } from "react-dropzone";
 import { CalendarDaysIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -6,7 +6,7 @@ import { CalendarDaysIcon, XMarkIcon } from "@heroicons/react/24/outline";
 export default function VisionBoard() {
   const [files, setFiles] = useState([]);
   const [previews, setPreview] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [imagesURL, setImagesURL] = useState([]);
   const [duration, setDuration] = useState(0);
   const [amount, setAmount] = useState(0);
@@ -50,7 +50,7 @@ export default function VisionBoard() {
         amount: amount,
       });
     }
-  }, [imagesURL]);
+  }, [amount, duration, imagesURL]);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*",
